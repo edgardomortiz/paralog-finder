@@ -1,5 +1,5 @@
 # paralog-finder
-Detects and blacklists paralog RAD loci analyzed in Stacks, based on the McKinney 2017 method (doi:10.1111/1755-0998.12613)
+Detects and blacklists paralog RAD loci analyzed in Stacks or ipyrad, based on the McKinney 2017 method (doi:10.1111/1755-0998.12613)
 
 ## _Description_
 These scripts allow the identification of paralog RAD loci based on the method of McKinney _et al._ 2017 (doi:10.1111/1755-0998.12613). However, we introduced some modifications and also made some additions. The main modification we made is the way in which the percentage of heterozygote individuals is calculated in datasets with varying degrees of missing data per locus. McKinney _et al._ (2017) divide the number of heterozygote individuals in the locus over the total number of individuals in the dataset, their results were not skewed because they either simulated data (0% missing data) or use very stringent filters for empirical data (at most 10% missing data per locus). Instead, our calculations consider only the number of individuals present at each locus since typical datasets usually have many loci represented by just a few individuals.
