@@ -50,7 +50,7 @@ def main():
 	paralogs = []
 	singletons = []
 
-	print "Retaining loci with at least "+str(min_num_samples)+" and with proportion of heterozygotes ≤ "+str(max_hetPerc)+" and D between "+str(min_z)+" and "+str(max_z)
+	print "Retaining loci with at least "+str(min_num_samples)+" sample and with proportion of heterozygotes ≤ "+str(max_hetPerc)+" and D between "+str(min_z)+" and "+str(max_z)
 
 	# Process file
 	with open(filename) as dbias:
