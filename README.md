@@ -7,7 +7,7 @@ These scripts allow the identification of paralog RAD loci based on the method o
 As an addition to their method, we also provide a script that creates a blacklist of paralog loci that can be used in `Stacks` to run the `populations` module and exclude the paralogs from the calculations and the output matrices for downstream analyses with other software.
 
 Briefly, the scripts must be run in three steps:
-- **Step 1:** Calculate loci statistics from the VCF file produced by Stacks with the script `HDplot_process_vcf.py`
+- **Step 1:** Calculate loci statistics from the VCF file produced by Stacks or ipyrad with the script `HDplot_process_vcf.py`
 - **Step 2:** Plot the statistics and decide limits for maximum heterozigosity (H), maximum and minimum read ratio deviation (D), and minimum of samples per locus with the R script `HDplot_graphs.R`
 - **Step 3:** Provide the parameters decided by the inspection of the graphs to the script `blacklist_paralogs.py` to create the blacklist of paralog loci and a whitelist of singleton loci.
 
@@ -17,19 +17,19 @@ Briefly, the scripts must be run in three steps:
 
 ## _Usage_
 ### Step 1: HDplot_process_vcf.py
-The script calculates heterozigosity and read ratio deviation from a VCF file produced by `Stacks`. Type `python HDplot_process_vcf.py -h` to show the help message:
+The script calculates heterozigosity and read ratio deviation from a VCF file produced by `Stacks` or `ipyrad`. Type `python HDplot_process_vcf.py -h` to show the help message:
 ```
 usage: HDplot_process_vcf.py [-h] -i FILENAME
 
-Processes a VCF input file produced by Stacks for plotting heterozigosity and
-read depth deviations using the method of McKinney et al. 2017 (doi:
-10.1111/1755-0998.12613)
+Processes a VCF input file produced by Stacks or ipyrad for plotting
+heterozigosity and read depth deviations using the method of McKinney et al.
+2017 (doi: 10.1111/1755-0998.12613)
 
 optional arguments:
   -h, --help            show this help message and exit
   -i FILENAME, --input FILENAME
                         Name of VCF input file, must have read depth per
-                        allele in each individual (Stacks format)
+                        allele in each individual (Stacks or ipyrad format)
 ```
 _Example:_ This command creates a file with the same name as the VCF but with extension .depthsBias: `batch_1.depthsBias`
 ```bash
