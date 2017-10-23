@@ -3,7 +3,7 @@
 
 
 '''
-After running HDplot (McKinney et al. 2017, Molecular Ecology Resources) to
+After running HDplot (McKinney et al. 2016, Molecular Ecology Resources) to
 identify paralogs by determining the "read depth ratio (D)" and "percentage
 of heterozygotes" we need to parse the output and extract the list of loci
 that must be excluded from the Stack analysis (i.e., create a blacklist)
@@ -22,17 +22,17 @@ import argparse
 
 
 def main():
-	parser = argparse.ArgumentParser(description="Creates blacklist of paralog loci (and whitelist of singletons) based on the method McKinney et al. 2017 (doi: 10.1111/1755-0998.12613)")
+	parser = argparse.ArgumentParser(description="Creates blacklist of paralog loci (and whitelist of singletons) based on the method McKinney et al. 2016 (doi: 10.1111/1755-0998.12613)")
 	parser.add_argument("-i", "--input", action="store", dest="filename", required=True,
 		help="Name of the input file, the table with extension .depthsBias produced by HDplot.py")
 	parser.add_argument("--maxH", action="store", dest="max_hetPerc", type=float, default=0.6,
-		help="Maximum proportion of heterozygotes in a locus, default=0.6 taken from McKinney et al. 2017")
+		help="Maximum proportion of heterozygotes in a locus, default=0.6 taken from McKinney et al. 2016")
 	parser.add_argument("--minN", action="store", dest="min_num_samples", type=int, default=1,
 		help="Minimum number of samples in locus, default=1")
 	parser.add_argument("--minD", action="store", dest="min_z", type=int, default=-7,
-		help="Lower limit of read ratio deviation (D), default=-7 taken from McKinney et al. 2017")
+		help="Lower limit of read ratio deviation (D), default=-7 taken from McKinney et al. 2016")
 	parser.add_argument("--maxD", action="store", dest="max_z", type=int, default=7,
-		help="Upper limit of read ratio deviation (D), default=7 taken from McKinney et al. 2017")
+		help="Upper limit of read ratio deviation (D), default=7 taken from McKinney et al. 2016")
 	args = parser.parse_args()
 
 	filename = args.filename

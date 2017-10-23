@@ -1,6 +1,6 @@
 #!/usr/bin/env Rscript
 
-# Script based on McKinney et al. 2017's HDplot.R at:
+# Script based on McKinney et al. 2016's HDplot.R at:
 # http://datadryad.org/bitstream/handle/10255/dryad.123458/HDplot.R?sequence=1
 # Re-adapted to parse arguments and to create additional graphs for
 # Number of samples in locus (N) vs Heterozigosity (H) or Read ratio deviation (D)
