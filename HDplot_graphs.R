@@ -50,7 +50,11 @@ if ( args$minD != 0 | args$maxD != 0 ) {
 
 minH <- 0
 maxH <- round(max(HDplotData$hetPerc, na.rm=TRUE), 1)
-ticks_H <- round((maxH-minH)/20, digits=2)
+if (maxH >= 0.5) {
+  ticks_H <- round((maxH-minH)/20, digits=2)
+} else {
+  ticks_H <- round((maxH-minH)/10, digits=3)
+}
 
 minN <- min(HDplotData$num_samples, na.rm=TRUE)
 maxN <- max(HDplotData$num_samples, na.rm=TRUE)
