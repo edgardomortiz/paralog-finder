@@ -3,7 +3,7 @@
 
 
 '''
-Script based on McKinney et al. 2016's HDplot_python.py at:
+Script based on McKinney et al. 2017's HDplot_python.py at:
 http://datadryad.org/bitstream/handle/10255/dryad.123460/HDplot_python.py?sequence=1
 
 Our modification calculates percentage of heterozygotes per locus
@@ -112,7 +112,7 @@ def vcf_to_allele_depth(vcf_file, out_file):
 
 
 def main():
-	parser = argparse.ArgumentParser(description="Processes a VCF input file produced by Stacks or ipyrad for plotting heterozigosity and read depth deviations using the method of McKinney et al. 2016 (doi: 10.1111/1755-0998.12613)")
+	parser = argparse.ArgumentParser(description="Processes a VCF input file produced by Stacks or ipyrad for plotting heterozigosity and read depth deviations using the method of McKinney et al. 2017 (doi: 10.1111/1755-0998.12613)")
 	parser.add_argument("-i", "--input", action="store", dest="filename", required=True,
 		help="Name of VCF input file, must have read depth per allele in each individual (Stacks or ipyrad format)")
 	args = parser.parse_args()
