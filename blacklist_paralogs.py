@@ -3,7 +3,7 @@
 
 
 '''
-After running HDplot (McKinney et al. 2016, Molecular Ecology Resources) to
+After running HDplot (McKinney et al. 2017, Molecular Ecology Resources) to
 identify paralogs by determining the "read depth ratio (D)" and "percentage
 of heterozygotes" we need to parse the output and extract the list of loci
 that must be excluded from the Stack analysis (i.e., create a blacklist)
@@ -22,7 +22,7 @@ import argparse
 
 
 def main():
-	parser = argparse.ArgumentParser(description="Creates blacklist of paralog loci (and whitelist of singletons) based on the method McKinney et al. 2016 (doi: 10.1111/1755-0998.12613)")
+	parser = argparse.ArgumentParser(description="Creates blacklist of paralog loci (and whitelist of singletons) based on the method McKinney et al. 2017 (doi: 10.1111/1755-0998.12613)")
 	parser.add_argument("-i", "--input", action="store", dest="filename", required=True,
 		help="Name of the input file, the table with extension .depthsBias produced by HDplot.py")
 	parser.add_argument("--maxH", action="store", dest="max_hetPerc", type=float, default=0.6,
