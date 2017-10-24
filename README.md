@@ -1,8 +1,8 @@
 # paralog-finder
-Detects and blacklists paralog RAD loci analyzed in Stacks or ipyrad, based on the McKinney 2016 method (doi:10.1111/1755-0998.12613)
+Detects and blacklists paralog RAD loci analyzed in Stacks or ipyrad, based on the McKinney 2017 method (doi:10.1111/1755-0998.12613)
 
 ## _Description_
-These scripts allow the identification of paralog RAD loci based on the method of McKinney _et al._ 2016 (doi:10.1111/1755-0998.12613). However, we introduced some modifications and also made some additions. The main modification we made is the way in which the percentage of heterozygote individuals is calculated in datasets with varying degrees of missing data per locus. McKinney _et al._ (2016) divide the number of heterozygote individuals in the locus over the total number of individuals in the dataset, their results were not skewed because they either simulated data (0% missing data) or use very stringent filters for empirical data (at most 10% missing data per locus). Instead, our calculations consider only the number of individuals present at each locus since typical datasets usually have many loci represented by just a few individuals.
+These scripts allow the identification of paralog RAD loci based on the method of McKinney _et al._ 2017 (doi:10.1111/1755-0998.12613). However, we introduced some modifications and also made some additions. The main modification we made is the way in which the percentage of heterozygote individuals is calculated in datasets with varying degrees of missing data per locus. McKinney _et al._ (2017) divide the number of heterozygote individuals in the locus over the total number of individuals in the dataset, their results were not skewed because they either simulated data (0% missing data) or use very stringent filters for empirical data (at most 10% missing data per locus). Instead, our calculations consider only the number of individuals present at each locus since typical datasets usually have many loci represented by just a few individuals.
 
 As an addition to their method, we also provide a script that creates a blacklist of paralog loci that can be used in `Stacks` to run the `populations` module and exclude the paralogs from the calculations and the output matrices for downstream analyses with other software.
 
@@ -23,7 +23,7 @@ usage: HDplot_process_vcf.py [-h] -i FILENAME
 
 Processes a VCF input file produced by Stacks or ipyrad for plotting
 heterozigosity and read depth deviations using the method of McKinney et al.
-2016 (doi: 10.1111/1755-0998.12613)
+2017 (doi: 10.1111/1755-0998.12613)
 
 optional arguments:
   -h, --help            show this help message and exit
@@ -72,7 +72,7 @@ usage: blacklist_paralogs.py [-h] -i FILENAME [--maxH MAX_HETPERC]
                              [--maxD MAX_Z]
 
 Creates blacklist of paralog loci (and whitelist of singletons) based on the
-method McKinney et al. 2016 (doi: 10.1111/1755-0998.12613)
+method McKinney et al. 2017 (doi: 10.1111/1755-0998.12613)
 
 optional arguments:
   -h, --help            show this help message and exit
@@ -100,7 +100,7 @@ Retaining loci with at least 1 sample and with proportion of heterozygotes ≤ 0
 ```
 
 ## _References_
-- **McKinney, G.J, R.K. Waples, L.W. Seeb & J.E. Seeb. 2016.** Paralogs are revealed by proportion of heterozygotes and deviations in read ratios in genotyping-by-sequencing data from natural populations. _Molecular Ecology Resources._ doi:10.1111/1755-0998.12613
+- **McKinney, G.J, R.K. Waples, L.W. Seeb & J.E. Seeb. 2017.** Paralogs are revealed by proportion of heterozygotes and deviations in read ratios in genotyping-by-sequencing data from natural populations. _Molecular Ecology Resources_17(4):656-669, doi:10.1111/1755-0998.12613
 
 ## _Credits_
 - Code: [Edgardo M. Ortiz](mailto:e.ortiz.v@gmail.com)
