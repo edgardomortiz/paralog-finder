@@ -107,5 +107,5 @@ Retaining loci with at least 1 sample and with proportion of heterozygotes ≤ 0
 - Data and testing: [Juan D. Palacio-Mejía](mailto:jdpalacio@gmail.com)
 
 ## _Citation_
-Ortiz, E.M. 2018. paralog-finder v1.0, a script to detect and blacklist paralog RAD loci. doi: 10.5281/zenodo.1209328
+Ortiz, E.M. 2018. paralog-finder v1.0, a script to detect and blacklist paralog RAD loci. doi:10.5281/zenodo.1209328
 
