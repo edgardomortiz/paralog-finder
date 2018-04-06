@@ -100,7 +100,7 @@ Retaining loci with at least 1 sample and with proportion of heterozygotes ≤ 0
 ```
 
 ## _References_
-- **McKinney, G.J, R.K. Waples, L.W. Seeb & J.E. Seeb. 2017.** Paralogs are revealed by proportion of heterozygotes and deviations in read ratios in genotyping-by-sequencing data from natural populations. _Molecular Ecology Resources_17(4):656-669, doi:10.1111/1755-0998.12613
+- **McKinney, G.J, R.K. Waples, L.W. Seeb & J.E. Seeb. 2017.** Paralogs are revealed by proportion of heterozygotes and deviations in read ratios in genotyping-by-sequencing data from natural populations. _Molecular Ecology Resources_ 17(4):656-669, doi:10.1111/1755-0998.12613
 
 ## _Credits_
 - Code: [Edgardo M. Ortiz](mailto:e.ortiz.v@gmail.com)
