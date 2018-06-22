@@ -64,7 +64,10 @@ def vcf_to_allele_depth(vcf_file, out_file):
                         tabs = line.split('\t')
                         contig = tabs[0]
                         pos = tabs[1]
-                        locus_ID = tabs[2]
+                        if tabs[2] == ".":
+                            locus_ID = contig+"_"+str(int(pos)-1)
+                        else:
+                            locus_ID = tabs[2]
                         genotypes = tabs[9:]
                         depth_a_of_ind = dict()
                         depth_b_of_ind = dict()
