@@ -97,7 +97,7 @@ def vcf_to_allele_depth(vcf_file, out_file):
                         catg={"C":0, "A":1, "T":2, "G":3}
                         if len(alt) == 1: # if SNP is biallelic
                             for gen_idx, gen in enumerate(genotypes):
-                                if gen.split(":")[0] in ["1/0", "0,1"]: # if het
+                                if gen.split(":")[0] in ["1/0", "0/1"]: # if het
                                     depth_a_of_ind[inds[gen_idx]] = int(gen.split(":")[2].split(",")[catg[ref]])
                                     depth_b_of_ind[inds[gen_idx]] = int(gen.split(":")[2].split(",")[catg[alt]])
                         sum_a = sum(depth_a_of_ind.values())

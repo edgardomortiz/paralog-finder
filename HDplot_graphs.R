@@ -61,7 +61,7 @@ maxN <- max(HDplotData$num_samples, na.rm=TRUE)
 if (maxN-minN == 1) {
   seq_N <- c(minN,maxN)
 } else {
-  seq_N <- seq(minN,maxN,round((maxN-minN)/20, digits=0))
+  seq_N <- seq(minN,maxN,ceiling((maxN-minN)/20))
 }
 
 if (minD != maxD) {

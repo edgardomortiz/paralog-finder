@@ -72,19 +72,19 @@ def main():
 						if float(tabs[13]) >= min_z and float(tabs[13]) <= max_z:
 
 							# If true, append locus name to singletons list
-							singletons.append(tabs[3].split("_")[0])
+							singletons.append(tabs[3].replace(":","_").split("_")[0])
 
 						# If D not within range append to list of paralogs
 						else:
-							paralogs.append(tabs[3].split("_")[0])
+							paralogs.append(tabs[3].replace(":","_").split("_")[0])
 
 					# If percentage of heterozygotes above threshold append to paralogs list
 					else:
-						paralogs.append(tabs[3].split("_")[0])
+						paralogs.append(tabs[3].replace(":","_").split("_")[0])
 
 				# If minimum number of sample in locus is not reached
 				else:
-					paralogs.append(tabs[3].split("_")[0])
+					paralogs.append(tabs[3].replace(":","_").split("_")[0])
 
 
 	# Eliminate duplicate loci names from both lists, some SNPs may send loci to
